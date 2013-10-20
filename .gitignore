@@ -1,7 +1,6 @@
 .classpath
 .settings
 .project
-dist/
 eclipse/
 logs/
 modules/*/commands.pyc
