@@ -2,6 +2,10 @@
 
 # DDD Module For PlayFramework
 
+### Env
+
+* Play! Framework 1.2.5
+
 ### Support
 
 * Abstract Entity Class
@@ -25,10 +29,6 @@
 
     $ play dependencies SampleProject --clearcache
     $ play eclipsify SampleProject
-
-### How to use
-
-- <a href="https://github.com/asufana/DDDModuleSample" target="_blank">DDDModuleSample</a>
 
 
 ---
