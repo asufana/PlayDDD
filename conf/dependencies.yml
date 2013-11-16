@@ -1,4 +1,4 @@
-self: play -> PlayDDD 0.1
+self: play -> PlayDDD 0.2.0
 
 require:
     - play -> play 1.2.5
