@@ -16,7 +16,6 @@ public class ModelsTest extends UnitTest {
     @Test
     public void testConstructor() {
         final TestEntity test = new TestEntity("test").save();
-        assertThat(test.isSatisfied(), is(true));
         assertThat(test.id(), is(not(nullValue())));
         assertThat(test.createDate(), is(not(nullValue())));
         assertThat(test.modifyDate(), is(not(nullValue())));
@@ -41,11 +40,10 @@ public class ModelsTest extends UnitTest {
         }
         
         @Override
-        public boolean isSatisfied() {
+        public void isSatisfied() {
             if (isEmpty(name)) {
                 throw new RuntimeException();
             }
-            return true;
         }
     }
 }

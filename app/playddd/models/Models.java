@@ -75,13 +75,11 @@ public abstract class Models extends GenericModel {
     
     @Override
     public <T extends JPABase> T save() {
-        if (isSatisfied() == false) {
-            throw new RuntimeException();
-        }
+        isSatisfied();
         _save();
         return (T) this;
     }
     
-    public abstract boolean isSatisfied();
+    public abstract void isSatisfied();
     
 }

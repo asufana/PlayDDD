@@ -140,9 +140,7 @@ public class AbstractCriteriaTest extends UnitTest {
         }
         
         @Override
-        public boolean isSatisfied() {
-            return true;
-        }
+        public void isSatisfied() {}
     }
     
     @Entity
@@ -156,8 +154,6 @@ public class AbstractCriteriaTest extends UnitTest {
         }
         
         @Override
-        public boolean isSatisfied() {
-            return true;
-        }
+        public void isSatisfied() {}
     }
 }
