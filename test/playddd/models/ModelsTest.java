@@ -19,7 +19,7 @@ public class ModelsTest extends UnitTest {
         assertThat(test.isSatisfied(), is(true));
         assertThat(test.id(), is(not(nullValue())));
         assertThat(test.createDate(), is(not(nullValue())));
-        assertThat(test.modifyDate(), is(nullValue()));
+        assertThat(test.modifyDate(), is(not(nullValue())));
         assertThat(test.isDisable(), is(false));
         test.disable();
         test.save();

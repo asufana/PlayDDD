@@ -20,7 +20,6 @@ public class EntityModelsTest extends UnitTest {
     
     @Entity
     private class TestEntity extends EntityModels<TestEntity> {
-        
         @Override
         public boolean isSatisfied() {
             return true;

@@ -26,7 +26,7 @@ public abstract class Models extends GenericModel {
         return id();
     }
     
-    //楽観ロックカラム
+    //Optimistic locking
     @Version
     protected Long version;
     
@@ -65,6 +65,7 @@ public abstract class Models extends GenericModel {
     @PrePersist
     protected void prePersist() {
         createDate = new DateTime();
+        modifyDate = createDate();
     }
     
     @PreUpdate
@@ -81,7 +82,6 @@ public abstract class Models extends GenericModel {
         return (T) this;
     }
     
-    /** エンティティが仕様を満たしているかどうか */
     public abstract boolean isSatisfied();
     
 }

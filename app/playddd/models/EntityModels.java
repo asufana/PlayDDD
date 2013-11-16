@@ -4,9 +4,6 @@ import javax.persistence.*;
 
 import org.hibernate.proxy.*;
 
-/**
- * エンティティ抽象基底クラス
- */
 @MappedSuperclass
 public abstract class EntityModels<T extends Models> extends Models {
     
@@ -28,7 +25,7 @@ public abstract class EntityModels<T extends Models> extends Models {
         }
         
         if (o.getClass() != this.getClass()) {
-            //参考：http://stackoverflow.com/questions/11013138/hibernate-equals-and-proxy
+            //http://stackoverflow.com/questions/11013138/hibernate-equals-and-proxy
             if (getClassObj(o).isAssignableFrom(getClassObj(this)) == false
                     && getClassObj(this).isAssignableFrom(getClassObj(o)) == false) {
                 return false;
@@ -40,8 +37,7 @@ public abstract class EntityModels<T extends Models> extends Models {
     }
     
     private Class getClassObj(final Object obj) {
-        //HibernateによりJavassistで修正された元エンティティのクラス名取得
-        //参考：http://stackoverflow.com/questions/1139611/loading-javassist-ed-hibernate-entity
+        //http://stackoverflow.com/questions/1139611/loading-javassist-ed-hibernate-entity
         return obj instanceof HibernateProxy
                 ? HibernateProxyHelper.getClassWithoutInitializingProxy(obj)
                 : obj.getClass();
