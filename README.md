@@ -23,7 +23,7 @@
     repositories:
         - asufana_playmodules_github:
             type:       http
-            artifact:   "https://github.com/[organisation]/PlayDDD/raw/master/dist/[module]-[revision].zip"
+            artifact:   https://github.com/[organisation]/PlayDDD/raw/master/dist/[module]-[revision].zip
             contains:
                 - asufana -> *
 
